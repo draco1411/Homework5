@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{theJackPack}
+
+\title{Homework 5}
+\author{Jack Brolin}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+\begin{jacklist}
+    \begin{framed} 
+    \item [\textbf{P. 1}] Consider the linear programming problem: 
+        \begin{align*}
+            \text{min }  & x_{1}-x_{2} \\
+            \text{s.t. } & 2 x_{1}+3 x_{2}-x_{3}+x_{4} \leq 0 \\
+                         & 3 x_{1}+x_{2}+4 x_{3}-2 x_{4} \geq 3 \\
+                         & -x_{1}-x_{2}+2 x_{3}+x_{4}=6 \\
+                         & x_{1} \leq 0 \\
+                         & x_{2}, x_{3} \geq 0 .
+        \end{align*} 
+        Write down the corresponding dual problem.
+    \end{framed}
+\newpage
+    \begin{framed} 
+    \item [\textbf{P. 2}] Consider a linear programming problem in standard form and assume that the rows of $A$ are 
+        linearly independent. For each one of the following statements, provide either a proof or a counterexample.
+        \begin{itemize}
+            \item [a.] Let $x^{*}$ be a basic feasible solution. Suppose that for every basis corresponding to $x^{*}$, 
+                the associated basic solution to the dual is infeasible. Then, the optimal cost must be 
+                strictly less than $c^{\prime} x^{*}$.
+            \item [b.] The dual of the auxiliary primal problem considered in Phase I of the simplex method is always feasible.
+            \item [c.] Let $p_{i}$ be the dual variable associated with the $i^{\text{th}}$ equality constraint in the primal. 
+                Eliminating the $i^{\text{th}}$ primal equality constraint is equivalent to introducing the additional constraint 
+                $p_{i}=0$ in the dual problem.
+            \item [d.]  If the unboundedness criterion is satisfied when we solve the primal with the simplex method, 
+                then the dual problem is infeasible. 
+        \end{itemize}
+    \end{framed}
+\newpage
+    \begin{framed} 
+    \item [\textbf{P. 3}] Let $A$ be a symmetric square matrix. Consider the linear programming problem: 
+        \begin{align*}
+            \text{minimize } & c^\prime x \\
+            \text { subject to } & A x \geq c \\
+            & x \geq 0
+        \end{align*}
+        Prove that if $x^{*}$ satisfies $A x^{*}=c$ and $x^{*} \geq 0$, then $x^{*}$ is an optimal solution.
+    \end{framed}
+\newpage
+    \begin{framed} 
+    \item [\textbf{P. 7}] Consider the following pair of linear programming problems:
+        \begin{align*}
+            \text{minimize } & c^{\prime} x & \text{maximize } & p^{\prime} b \\
+            \text{subject to } & A x \geq b & \text{subject to } & p^{\prime} A \leq c^{\prime} \\
+            & x \geq 0, & & p \geq 0 .
+        \end{align*}
+        Suppose at least one of these two problems has a feasible solution. Prove that the set of feasible solutions to at least 
+        one of the two problems is unbounded.
+    \end{framed}
+\newpage
+    \begin{framed} 
+    \item [\textbf{P. 10}] Consider the problem: 
+        \begin{align*}
+            & \min \max _{i=1, \ldots, m}\left(a_{i}^{\prime} x-b_{i}\right) \\
+            & \text { s.t. } x \in \mathbb{R}^{n} .
+        \end{align*} Let $v$ be the optimal value of the above optimization problem, let $A$ be the $m \times n$ matrix whose 
+        rows are $a_{1}^{\prime}, \ldots, a_{m}^{\prime}$, and let $b$ be the vector whose components are $b_{1}, \ldots, b_{m}$.
+        \begin{itemize}
+            \item [a.] Consider any vector $p \in \mathbb{R}^{m}$ such that $p^{\prime} A=0^{\prime}, p \geq 0$, and 
+                $\sum_{i=1}^{m} p_{i}=1$. Show that $-p^{\prime} b \leq v$.
+            \item [b.] In order to obtain the best possible lower bound of the form obtained in part (a), we consider the linear program:
+                \begin{align*}
+                    \max -p^{\prime} b \\
+                    \text { s.t. } p^{\prime} A=0^{\prime} \\
+                    \sum_{i=1}^{m} p_{i}=1 \\
+                    p \geq 0.
+                \end{align*} 
+                Show that the optimal cost of the above linear program is $v$.
+        \end{itemize}
+    \end{framed}
+\end{jacklist}
+\end{document}
