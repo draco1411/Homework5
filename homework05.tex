@@ -3,7 +3,7 @@
 \usepackage{theJackPack}
 
 \title{Homework 5}
-\author{Jack Brolin}
+\author{Jack Brolin, Abhiram Nallamalli}
 \date{July 2023}
 
 \begin{document}
@@ -23,6 +23,17 @@
         \end{align*} 
         Write down the corresponding dual problem.
     \end{framed}
+    Following the table from section 4.2 of the text, the corresponding dual problem is as follows:
+    \begin{align*}
+        \text{Max } & 3p_2 + 6p_3 \\
+        \text{s.t. } & 2p_1 + 3p_2 - p_3 \geq 1\\
+                     & p_1 + p_2 - p_3 \leq -1 \\
+                     &-p_1 + 4p_2 + 2p_3 \leq 0 \\
+                     &p_1 - 2p_2 - p_3 = 0 \\
+                     &\qquad \qquad  p_1 \leq 0 \\
+                     &\qquad \qquad  p_2 \geq 0 \\
+                     & \qquad \qquad p_3 \text{ is free}
+    \end{align*}
 \newpage
     \begin{framed} 
     \item [\textbf{P. 2}] Consider a linear programming problem in standard form and assume that the rows of $A$ are 
@@ -32,13 +43,21 @@
                 the associated basic solution to the dual is infeasible. Then, the optimal cost must be 
                 strictly less than $c^{\prime} x^{*}$.
             \item [b.] The dual of the auxiliary primal problem considered in Phase I of the simplex method is always feasible.
-            \item [c.] Let $p_{i}$ be the dual variable associated with the $i^{\text{th}}$ equality constraint in the primal. 
-                Eliminating the $i^{\text{th}}$ primal equality constraint is equivalent to introducing the additional constraint 
+            \item [c.] Let $p_{i}$ be the dual variable associated with the $i^{th}$ equality constraint in the primal. 
+                Eliminating the $i^{th}$ primal equality constraint is equivalent to introducing the additional constraint 
                 $p_{i}=0$ in the dual problem.
             \item [d.]  If the unboundedness criterion is satisfied when we solve the primal with the simplex method, 
                 then the dual problem is infeasible. 
         \end{itemize}
     \end{framed}
+    \begin{itemize}
+        \item [a.] True. We know that the optimal cost of the dual is less than or equal to the optimal most of the primal. If 
+            $x^\star$ is a basic feasible solution of the primal but infeasible for the dial, the its cost me be greater than the cost
+            of the dual. 
+        \item [b.] True. Since the primal auxiliary problem is always feasible, the dual is feasible too.
+        \item [c.] True. Constraints are of the form $\sum p_ia_i$, so setting $p_i = 0$ effectively eliminates it. 
+        \item [d.] True. If the primal cost goes to $- \infty$ than the dual is infeasible. 
+    \end{itemize}
 \newpage
     \begin{framed} 
     \item [\textbf{P. 3}] Let $A$ be a symmetric square matrix. Consider the linear programming problem: 
@@ -78,7 +97,7 @@
                     \sum_{i=1}^{m} p_{i}=1 \\
                     p \geq 0.
                 \end{align*} 
-                Show that the optimal cost of the above linear program is $v$.
+                Show that the optimal cost of the above linear program is $v$. 
         \end{itemize}
     \end{framed}
 \end{jacklist}
