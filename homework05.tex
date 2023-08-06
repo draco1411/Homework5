@@ -79,6 +79,23 @@
         Suppose at least one of these two problems has a feasible solution. Prove that the set of feasible solutions to at least 
         one of the two problems is unbounded.
     \end{framed}
+    \begin{proof}
+        We are proving Clark's Lemma. \\
+        \begin{itemize}
+            \item [1.] If the primal set us unbounded, the dual can be either bounded or unbounded. 
+            \item [2.] If the primal set is bounded, consider the problem: 
+                \begin{align*}
+                    \text{min } & -c^\prime x & \text{max } & p^\prime b \\
+                    \text{s.t. } & Ax \geq b & \text{s.t.} & p^\prime A \leq -c^\prime \\
+                                 &x \geq 0, & & p \geq 0. 
+                \end{align*} 
+                Say $w$ is a solution to this problem, so $w^\prime A \leq c^\prime$ and $w \geq 0$. Say $d$ is a solution 
+                to the original dual problem and let $\theta \geq 0$. If we take $d + \theta w$ and show that this is a feasible 
+                solution to the original dual problem, we get that the dual is unbounded. Indeed, $d + \theta w \geq 0$ as 
+                $d, \theta, w \geq 0$ and $d + \theta w^\prime A \leq c^\prime$ since $(\theta w)A \leq -c^\prime 
+                \Rightarrow (d + \theta w)^\prime A \leq c^\prime$.
+        \end{itemize} 
+    \end{proof}
 \newpage
     \begin{framed} 
     \item [\textbf{P. 10}] Consider the problem: 
