@@ -129,5 +129,31 @@
                 Show that the optimal cost of the above linear program is $v$. 
         \end{itemize}
     \end{framed}
+    \begin{itemize}
+        \item [a.] 
+            \begin{proof}
+                We first convert the problem into a linear programming problem following the same instructions we used in chapter 1.
+                Thus, the given problem is equivalent to 
+                \begin{align*}
+                    \text{min } & z \\
+                    \text{s.t. } & z \geq a_1^\prime x - b_1 \\
+                                 & \ldots \\
+                                 &z \geq a_m^\prime x - b_m
+                \end{align*} 
+                Then we can get the corresponding dual: 
+                \begin{align*}
+                    \text{max } & -p^\prime b \\
+                    \text{s.t. } & p^\prime A = c^\prime  = 0 \\
+                                 & \sum_{i=1}^m p_1 = 1 \\
+                                 &p \geq 0
+                \end{align*} 
+                By weak duality, $p^\prime b \leq c^\prime x = v$. 
+            \end{proof}
+        \item [b.] 
+            \begin{proof}
+                From the above construction we can see that we have arrived at the dual, and thus string duality implies 
+                that the optimal costs are the same. i.e. $v$ for the given problem. 
+            \end{proof}
+    \end{itemize}
 \end{jacklist}
 \end{document}
