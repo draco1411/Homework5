@@ -68,6 +68,18 @@
         \end{align*}
         Prove that if $x^{*}$ satisfies $A x^{*}=c$ and $x^{*} \geq 0$, then $x^{*}$ is an optimal solution.
     \end{framed}
+    \begin{proof}
+        Consider the dual problem:
+        \begin{align*}
+            \text{max } & p^\prime b \\
+            \text{s.t. } & p^\prime A \leq c^\prime \\
+                         & p \geq 0
+        \end{align*} 
+        Let $x^\star$ satisfy $Ax^\star = c$ and $x^\star \geq 0$. Since $A \in GL_n(\mathbb{R})$, basic linear algebra tells us 
+        $p^\prime A \leq c^\prime  = A^\prime p \leq c$. But $A$ is a symmetric matrix, so $A^\prime = A$ and thus $A^\prime p \leq c
+        = Ap \leq c$ with $p \geq 0$. Now if we let $p^\star = x^\star$ we see $p^{\star\prime} = c^\star x$ so by corollary 
+        4.2 $x^\star$ and $p^\star$ are optimal solutions. 
+    \end{proof}
 \newpage
     \begin{framed} 
     \item [\textbf{P. 7}] Consider the following pair of linear programming problems:
